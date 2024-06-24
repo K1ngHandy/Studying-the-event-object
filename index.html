@@ -9,32 +9,35 @@
     /*
     Problem 1: Add the parameter to the function (any name would work) and log it.
     */
-    const handleEvent = () => {
-
+    const param = (log) => {
+      console.log(log);
     };
+    param("Log");
 
     /*
     Problem 2: Change the action to log the event.key and assign the handler to the document:
     */
-    const handleEvent2 = (event) => {
-      console.log('pressed a key');
+    const handleEvent2 = (key) => {
+      console.log(`Pressed ${key} key`);
     };
+    document.addEventListener("keydown", handleEvent2);
 
     /*
     Problem 3: Change 'click' to 'dblclick', and update the message!
     */
     const handler = () => {
-      console.log("click!");
+      console.log("Double click!");
     };
-    document.addEventListener("click", handler);
+    document.addEventListener("dblclick", handler);
 
     /*
     Problem 4: "event.name" is not a property. Change it to "event.type".
     */
-    const Logger = (e) => {
-      console.log(e.name);
+    const name = (e) => {
+      console.log(e.type);
     };
-    document.addEventListener("click", Logger);
+    document.addEventListener("click", name);
+
   </script>
 </body>
 
